@@ -18,13 +18,15 @@
   .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
   .card img { width: 100%; aspect-ratio: 1; object-fit: contain; padding: 4px; background: #f8fafc; }
   .card .label { padding: 4px 8px; font-size: 10px; color: #334155; font-weight: 500; border-top: 1px solid #e2e8f0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .vote-bar { display: flex; justify-content: space-between; align-items: center; padding: 2px 8px 4px; font-size: 10px; }
+  .card .vote-bar .vote-count { color: #94a3b8; font-size: 9px; }
+  .card .vote-bar .star-display { color: #f59e0b; font-size: 11px; letter-spacing: -1px; }
   .badge { position: absolute; top: 4px; right: 4px; padding: 1px 5px; border-radius: 3px; font-size: 9px; font-weight: 700; }
   .badge.scan { background: #dcfce7; color: #166534; }
   .badge.fail { background: #fef2f2; color: #991b1b; }
-  .stars { position: absolute; top: 4px; left: 4px; font-size: 10px; }
   .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; align-items: center; justify-content: center; flex-direction: column; padding: 20px; }
   .overlay.active { display: flex; }
-  .overlay img { max-width: 80vmin; max-height: 70vmin; border-radius: 8px; }
+  .overlay img { max-width: 80vmin; max-height: 60vmin; border-radius: 8px; }
   .overlay .info { color: white; margin-top: 14px; text-align: center; max-width: 600px; }
   .overlay .info h3 { font-size: 16px; margin-bottom: 6px; }
   .overlay .info p { font-size: 13px; color: #94a3b8; margin: 3px 0; }
@@ -35,11 +37,20 @@
   .overlay .nav { position: fixed; top: 50%; color: white; font-size: 36px; cursor: pointer; user-select: none; padding: 20px; }
   .overlay .nav.prev { left: 10px; }
   .overlay .nav.next { right: 10px; }
+  .voting { margin-top: 12px; display: flex; gap: 12px; justify-content: center; align-items: center; }
+  .voting .thumbs { display: flex; gap: 8px; }
+  .voting .thumbs button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 16px; transition: all 0.15s; }
+  .voting .thumbs button:hover { background: rgba(255,255,255,0.2); }
+  .voting .thumbs button.voted { border-color: #2563eb; background: rgba(37,99,235,0.3); }
+  .voting .star-rating { display: flex; gap: 2px; }
+  .voting .star-rating button { background: none; border: none; color: #475569; font-size: 22px; cursor: pointer; padding: 2px; transition: color 0.1s; }
+  .voting .star-rating button:hover, .voting .star-rating button.active { color: #f59e0b; }
+  .voting .vote-status { font-size: 11px; color: #64748b; min-width: 80px; }
 </style>
 </head>
 <body>
 <h1>QueryStory QR Code Experiments</h1>
-<p class="subtitle">All encode <code>https://querystory.ai</code> &middot; <a href="https://github.com/querystory/experimental/tree/main/shapor/qr-codes">GitHub repo</a></p>
+<p class="subtitle">All encode <code>https://querystory.ai</code> &middot; <a href="https://github.com/querystory/experimental/tree/main/shapor/qr-codes">GitHub repo</a> &middot; Vote on your favorites!</p>
 <div class="stats" id="stats"></div>
 <div class="controls" id="controls"></div>
 <div class="grid" id="grid"></div>
@@ -51,20 +62,50 @@
   <div class="info" id="overlay-info"></div>
 </div>
 <script>
+const WEBHOOK = "https://script.google.com/a/macros/querystory.ai/s/AKfycbyTiN89uIjXJc7RdwLt4eyPb8binSYjps7mZn2uCm8jQLekaNw9T8iE74zUCyR8irLJcA/exec";
 const GITHUB_BASE = "https://github.com/querystory/experimental/blob/main/shapor/qr-codes/";
+
 let manifest = [];
 let filtered = [];
 let currentIdx = -1;
 let activeFilter = "top";
-let activeScan = "all";
+let votes = {};       // aggregated from server
+let myVotes = JSON.parse(localStorage.getItem("qr-votes") || "{}"); // {file: {vote, stars}}
 
-fetch("manifest.json").then(r => r.json()).then(data => {
+// Load manifest + votes
+Promise.all([
+  fetch("manifest.json").then(r => r.json()),
+  fetch(WEBHOOK).then(r => r.json()).catch(() => ({})),
+]).then(([data, serverVotes]) => {
   manifest = data;
+  votes = serverVotes;
   document.getElementById("stats").textContent =
     `${manifest.length} variants \u2014 ${manifest.filter(v=>v.scans_pyzbar).length} pass pyzbar. Phone cameras scan more!`;
   buildControls();
   render();
 });
+
+function sendVote(file, vote, stars) {
+  const body = { file };
+  if (vote) body.vote = vote;
+  if (stars) body.stars = stars;
+  // Save locally
+  if (!myVotes[file]) myVotes[file] = {};
+  if (vote) myVotes[file].vote = vote;
+  if (stars) myVotes[file].stars = stars;
+  localStorage.setItem("qr-votes", JSON.stringify(myVotes));
+  // Send to sheet
+  fetch(WEBHOOK, { method: "POST", body: JSON.stringify(body), mode: "no-cors" });
+}
+
+function getVoteDisplay(file) {
+  const v = votes[file] || {};
+  const up = v.up || 0;
+  const down = v.down || 0;
+  const avg = v.avg || 0;
+  const count = v.count || 0;
+  return { up, down, avg, count };
+}
 
 function buildControls() {
   const c = document.getElementById("controls");
@@ -119,8 +160,12 @@ function render() {
     const badge = v.scans_pyzbar
       ? '<span class="badge scan">SCANS</span>'
       : '<span class="badge fail">FAIL</span>';
-    const stars = v.stars > 0 ? `<span class="stars">${"\u2605".repeat(v.stars)}</span>` : "";
-    card.innerHTML = `${badge}${stars}<img src="variants/${v.file}" loading="lazy"><div class="label" title="${v.description}">${v.description}</div>`;
+    const vd = getVoteDisplay(v.file);
+    const my = myVotes[v.file] || {};
+    const starStr = my.stars ? "\u2605".repeat(my.stars) + "\u2606".repeat(5 - my.stars) : "";
+    const voteInfo = vd.count > 0 ? `<span class="vote-count">${vd.avg}\u2605 (${vd.count}) \u00b7 \u{1f44d}${vd.up}</span>` : "";
+    const myStarStr = my.stars ? `<span class="star-display">${"\u2605".repeat(my.stars)}</span>` : "";
+    card.innerHTML = `${badge}<img src="variants/${v.file}" loading="lazy"><div class="label" title="${v.description}">${v.description}</div><div class="vote-bar">${myStarStr}${voteInfo}</div>`;
     card.onclick = () => openOverlay(i);
     grid.appendChild(card);
   });
@@ -129,16 +174,45 @@ function render() {
 function openOverlay(idx) {
   currentIdx = idx;
   const v = filtered[idx];
+  const my = myVotes[v.file] || {};
   document.getElementById("overlay-img").src = "variants/" + v.file;
   const tags = v.tags.map(t => `<span class="tag">${t}</span>`).join("");
+  const vd = getVoteDisplay(v.file);
+
+  let starButtons = "";
+  for (let i = 1; i <= 5; i++) {
+    const cls = (my.stars && i <= my.stars) ? "active" : "";
+    starButtons += `<button class="${cls}" onclick="voteStar(${idx},${i})">\u2605</button>`;
+  }
+
   document.getElementById("overlay-info").innerHTML = `
     <h3>${v.description}</h3>
     <p>${v.scans_pyzbar ? "\u2705 Scans with pyzbar" : "\u274c pyzbar fail \u2014 try phone"}${v.scans_inverted ? " (scans inverted)" : ""}</p>
+    <div class="voting">
+      <div class="thumbs">
+        <button class="${my.vote==='up'?'voted':''}" onclick="voteThumb(${idx},'up')">\u{1f44d}</button>
+        <button class="${my.vote==='down'?'voted':''}" onclick="voteThumb(${idx},'down')">\u{1f44e}</button>
+      </div>
+      <div class="star-rating">${starButtons}</div>
+      <div class="vote-status">${vd.count > 0 ? `${vd.avg}\u2605 (${vd.count} votes) \u00b7 \u{1f44d}${vd.up} \u{1f44e}${vd.down}` : "No votes yet"}</div>
+    </div>
     <p><a href="${GITHUB_BASE}${v.script}" target="_blank">\ud83d\udcc4 ${v.script}</a></p>
     <p style="font-size:11px;color:#64748b">File: ${v.file}</p>
     <div class="tags">${tags}</div>
   `;
   document.getElementById("overlay").classList.add("active");
+}
+
+function voteThumb(idx, vote) {
+  const v = filtered[idx];
+  sendVote(v.file, vote, null);
+  openOverlay(idx); // refresh UI
+}
+
+function voteStar(idx, stars) {
+  const v = filtered[idx];
+  sendVote(v.file, null, stars);
+  openOverlay(idx); // refresh UI
 }
 
 function closeOverlay() { document.getElementById("overlay").classList.remove("active"); currentIdx = -1; }
