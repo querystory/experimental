@@ -139,6 +139,186 @@
     "stars": 3
   },
   {
+    "file": "L01.png",
+    "name": "L01",
+    "description": "Large blue Q center + S bottom-right",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L02.png",
+    "name": "L02",
+    "description": "QS on blue badge center (PayPal style)",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L03.png",
+    "name": "L03",
+    "description": "QS formed by forced-on blue dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L04.png",
+    "name": "L04",
+    "description": "Q-tail on finders + S center",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L05.png",
+    "name": "L05",
+    "description": "Negative space QS (white letters carved out)",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L06.png",
+    "name": "L06",
+    "description": "QS via dot-size modulation (large=letters)",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L07.png",
+    "name": "L07",
+    "description": "QS via color (blue dots = letters)",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L08.png",
+    "name": "L08",
+    "description": "QS via shape (squares=letters, rounded=bg)",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L09.png",
+    "name": "L09",
+    "description": "Faint QS watermark behind pattern",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L10.png",
+    "name": "L10",
+    "description": "QS via color+size combo",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L11.png",
+    "name": "L11",
+    "description": "White Q in blue circle + S outlined by dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L12.png",
+    "name": "L12",
+    "description": "Gradient blue QS dots + size",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L13.png",
+    "name": "L13",
+    "description": "Compact QS badge center",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L14.png",
+    "name": "L14",
+    "description": "QS badge + hinted in surrounding dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "L15.png",
+    "name": "L15",
+    "description": "Blue diamonds form QS, gray circles bg",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_l.py",
+    "tags": [
+      "qs-letters"
+    ],
+    "stars": 3
+  },
+  {
     "file": "B01_horiz_connections.png",
     "name": "B01_horiz_connections",
     "description": "Horizontal connections, black, round caps",
