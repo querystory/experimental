@@ -71,14 +71,17 @@ let currentIdx = -1;
 let activeFilter = "top";
 let votes = {};       // aggregated from server
 let myVotes = JSON.parse(localStorage.getItem("qr-votes") || "{}"); // {file: {vote, stars}}
+let userEmail = "anonymous";
 
-// Load manifest + votes
+// Load manifest + votes + identity
 Promise.all([
   fetch("manifest.json").then(r => r.json()),
   fetch(WEBHOOK).then(r => r.json()).catch(() => ({})),
-]).then(([data, serverVotes]) => {
+  fetch("/_identity").then(r => r.json()).catch(() => ({ email: "" })),
+]).then(([data, serverVotes, identity]) => {
   manifest = data;
   votes = serverVotes;
+  userEmail = identity.email || "anonymous";
   document.getElementById("stats").textContent =
     `${manifest.length} variants \u2014 ${manifest.filter(v=>v.scans_pyzbar).length} pass pyzbar. Phone cameras scan more!`;
   buildControls();
@@ -89,6 +92,7 @@ function sendVote(file, vote, stars) {
   const body = { file };
   if (vote) body.vote = vote;
   if (stars) body.stars = stars;
+  body.voter = userEmail;
   // Save locally
   if (!myVotes[file]) myVotes[file] = {};
   if (vote) myVotes[file].vote = vote;
