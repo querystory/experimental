@@ -1,0 +1,2392 @@
+[
+  {
+    "file": "81_etched_solid_s.png",
+    "name": "81_etched_solid_s",
+    "description": "Etched QS logo in finders + solid S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders",
+      "s-curve"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "82_etched_no_s.png",
+    "name": "82_etched_no_s",
+    "description": "Etched QS logo in finders, no S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders",
+      "s-curve"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "83_etched_dot_s.png",
+    "name": "83_etched_dot_s",
+    "description": "Etched QS logo + dot-chain S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders",
+      "s-curve",
+      "s-curve"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "84_etched_dark.png",
+    "name": "84_etched_dark",
+    "description": "Etched finders, dark blue-800",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "85_etched_indigo.png",
+    "name": "85_etched_indigo",
+    "description": "Etched finders, indigo color",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "86_etched_gradient.png",
+    "name": "86_etched_gradient",
+    "description": "Etched finders + dark-to-light gradient dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders",
+      "color"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "87_etched_quadrant.png",
+    "name": "87_etched_quadrant",
+    "description": "Etched finders + 4-color quadrants",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders",
+      "color"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "89_etched_soft_sq.png",
+    "name": "89_etched_soft_sq",
+    "description": "Etched finders + soft rounded square dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders",
+      "s-curve"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "90_etched_hex.png",
+    "name": "90_etched_hex",
+    "description": "Etched finders + hexagonal dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "91_etched_center.png",
+    "name": "91_etched_center",
+    "description": "Etched finders + center logo",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "92_etched_teal.png",
+    "name": "92_etched_teal",
+    "description": "Etched finders, teal color",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders"
+    ],
+    "stars": 3
+  },
+  {
+    "file": "B01_horiz_connections.png",
+    "name": "B01_horiz_connections",
+    "description": "Horizontal connections, black, round caps",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B02_hv_connections.png",
+    "name": "B02_hv_connections",
+    "description": "H+V connections, black",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B03_blue_hv_etched.png",
+    "name": "B03_blue_hv_etched",
+    "description": "H+V connections, blue, etched finders",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "etched-finders",
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B04_pcb_square.png",
+    "name": "B04_pcb_square",
+    "description": "PCB traces, dark blue, square ends",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected",
+      "s-curve"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B05_pcb_vary_thick.png",
+    "name": "B05_pcb_vary_thick",
+    "description": "PCB traces, varying thickness near grid center",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B06_metro_horiz.png",
+    "name": "B06_metro_horiz",
+    "description": "Metro map, horizontal only, rounded",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B07_metro_hv_etched.png",
+    "name": "B07_metro_hv_etched",
+    "description": "Metro map H+V, etched finders",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "etched-finders",
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B08_navy_grid_emphasis.png",
+    "name": "B08_navy_grid_emphasis",
+    "description": "Navy on light gray, grid emphasis",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B09_organic_thin.png",
+    "name": "B09_organic_thin",
+    "description": "Organic thin connections",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "B10_bold_network.png",
+    "name": "B10_bold_network",
+    "description": "Bold thick network, light blue bg",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_b_series.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F01.png",
+    "name": "F01",
+    "description": "Real S-curve behind QR, semi-transparent",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F02.png",
+    "name": "F02",
+    "description": "Thick S-curve, etched finders",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F03.png",
+    "name": "F03",
+    "description": "S-curve with glow/shadow",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F04.png",
+    "name": "F04",
+    "description": "Fading S-curve exiting boundary",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F05.png",
+    "name": "F05",
+    "description": "Teal S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F06.png",
+    "name": "F06",
+    "description": "Dotted S-curve pattern",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F07.png",
+    "name": "F07",
+    "description": "Thin purple S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F08.png",
+    "name": "F08",
+    "description": "Double S-curve shadow",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F09.png",
+    "name": "F09",
+    "description": "Warm orange S-curve with glow",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "F10.png",
+    "name": "F10",
+    "description": "Gradient S blue-to-teal + dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_f.py",
+    "tags": [
+      "extending-s"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G01.png",
+    "name": "G01",
+    "description": "Connected dots + thick S trace on top",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G02.png",
+    "name": "G02",
+    "description": "Gradient connections near S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G03.png",
+    "name": "G03",
+    "description": "Gap/channel along S-curve path",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G04.png",
+    "name": "G04",
+    "description": "Metro map with station dots on S",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G05.png",
+    "name": "G05",
+    "description": "PCB green board, gold S signal path",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G06.png",
+    "name": "G06",
+    "description": "Blue highlight connections near S",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G07.png",
+    "name": "G07",
+    "description": "Background glow behind S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G08.png",
+    "name": "G08",
+    "description": "Dual-color split along S boundary",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G09.png",
+    "name": "G09",
+    "description": "White S etched through connected mass",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "G10.png",
+    "name": "G10",
+    "description": "Combined gradient+glow+etched",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_g.py",
+    "tags": [
+      "connected"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H01.png",
+    "name": "H01",
+    "description": "Circles near S, squares far",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H02.png",
+    "name": "H02",
+    "description": "Size modulation \u2014 S emerges from dot sizes",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H03.png",
+    "name": "H03",
+    "description": "Color gradient \u2014 bright near S, dark far",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H04.png",
+    "name": "H04",
+    "description": "Combined shape+size+color modulation",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H05.png",
+    "name": "H05",
+    "description": "Subtle S line + size modulation",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H06.png",
+    "name": "H06",
+    "description": "Diamonds on S-curve path, circles elsewhere",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H07.png",
+    "name": "H07",
+    "description": "Stars on S-curve path",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H08.png",
+    "name": "H08",
+    "description": "Inverted size \u2014 gap channel traces S",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H09.png",
+    "name": "H09",
+    "description": "Grid lines + S-curve both visible",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "H10.png",
+    "name": "H10",
+    "description": "Donut/ring shapes near S",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_h.py",
+    "tags": [
+      "shape-modulation"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I01.png",
+    "name": "I01",
+    "description": "Etched+size modulation+extending S",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I02.png",
+    "name": "I02",
+    "description": "PCB connected + orange S trace",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I03.png",
+    "name": "I03",
+    "description": "Zoomed-in logo feel, light blue bg",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I04.png",
+    "name": "I04",
+    "description": "Quadrant colors + orange S boundary",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I05.png",
+    "name": "I05",
+    "description": "Size+shape+extending S combo",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I06.png",
+    "name": "I06",
+    "description": "Metro transit map, red express S route",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I07.png",
+    "name": "I07",
+    "description": "Barcode lines + orange S cutting through",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I08.png",
+    "name": "I08",
+    "description": "Concentric rings + S overlay",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I09.png",
+    "name": "I09",
+    "description": "PCB green board, gold S signal path",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "I10.png",
+    "name": "I10",
+    "description": "Elegant minimal, thin dots",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "combo"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J01.png",
+    "name": "J01",
+    "description": "Blue bg, white modules, S-curve accent",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J02.png",
+    "name": "J02",
+    "description": "App-icon style, large rounded corners",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J03.png",
+    "name": "J03",
+    "description": "Blue bg, white connected traces + S",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J04.png",
+    "name": "J04",
+    "description": "Blue bg, faint grid lines, white modules",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J05.png",
+    "name": "J05",
+    "description": "Blue bg radial gradient, white modules",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J06.png",
+    "name": "J06",
+    "description": "Blue bg, size-modulated S visible",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J07.png",
+    "name": "J07",
+    "description": "Tight icon-shaped blue area, white padding",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J08.png",
+    "name": "J08",
+    "description": "Two-tone blue split",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J09.png",
+    "name": "J09",
+    "description": "Blue bg, 9 prominent intersection dots",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "J10.png",
+    "name": "J10",
+    "description": "Dark navy, bright blue dots (dark mode)",
+    "scans_pyzbar": true,
+    "scans_inverted": true,
+    "script": "scripts/generate.py",
+    "tags": [
+      "white-on-blue"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K02.png",
+    "name": "K02",
+    "description": "Watercolor/splatter, organic feel",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K04.png",
+    "name": "K04",
+    "description": "Blueprint, technical drawing aesthetic",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K05.png",
+    "name": "K05",
+    "description": "Neon glow halos",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K06.png",
+    "name": "K06",
+    "description": "Mosaic/tile with grout gaps",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K07.png",
+    "name": "K07",
+    "description": "DNA double helix along S-curve",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K08.png",
+    "name": "K08",
+    "description": "Constellation star map, faint connections",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K09.png",
+    "name": "K09",
+    "description": "Emboss/3D pressed effect",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "K10.png",
+    "name": "K10",
+    "description": "Red stamp/seal, crimson color",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 2
+  },
+  {
+    "file": "C01_radial_center_large.png",
+    "name": "C01_radial_center_large",
+    "description": "C01 radial center large",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C02_radial_edge_large.png",
+    "name": "C02_radial_edge_large",
+    "description": "C02 radial edge large",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C03_scurve_size.png",
+    "name": "C03_scurve_size",
+    "description": "C03 scurve size",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C04_scurve_size_color.png",
+    "name": "C04_scurve_size_color",
+    "description": "C04 scurve size color",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C05_grid_emergence.png",
+    "name": "C05_grid_emergence",
+    "description": "C05 grid emergence",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C06_horiz_sine.png",
+    "name": "C06_horiz_sine",
+    "description": "C06 horiz sine",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C07_diag_wave_blue.png",
+    "name": "C07_diag_wave_blue",
+    "description": "C07 diag wave blue",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C08_scurve_radial.png",
+    "name": "C08_scurve_radial",
+    "description": "C08 scurve radial",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C09_concentric_rings.png",
+    "name": "C09_concentric_rings",
+    "description": "C09 concentric rings",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "C10_scurve_grid_dual.png",
+    "name": "C10_scurve_grid_dual",
+    "description": "C10 scurve grid dual",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_c.py",
+    "tags": [
+      "size-modulation",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D01_radial_gradient.png",
+    "name": "D01_radial_gradient",
+    "description": "D01 radial gradient",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "color"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D02_angular_sweep.png",
+    "name": "D02_angular_sweep",
+    "description": "D02 angular sweep",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D03_scurve_boundary.png",
+    "name": "D03_scurve_boundary",
+    "description": "D03 scurve boundary",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D04_diagonal_gradient.png",
+    "name": "D04_diagonal_gradient",
+    "description": "D04 diagonal gradient",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "color"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D05_quadrant_blend.png",
+    "name": "D05_quadrant_blend",
+    "description": "D05 quadrant blend",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "color"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D06_scurve_distance.png",
+    "name": "D06_scurve_distance",
+    "description": "D06 scurve distance",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D09_bg_gradient.png",
+    "name": "D09_bg_gradient",
+    "description": "D09 bg gradient",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "color"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "D10_chrome_sectors.png",
+    "name": "D10_chrome_sectors",
+    "description": "D10 chrome sectors",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E01_barcode_lines.png",
+    "name": "E01_barcode_lines",
+    "description": "E01 barcode lines",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E02_quadrant_shapes.png",
+    "name": "E02_quadrant_shapes",
+    "description": "E02 quadrant shapes",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "color",
+      "mixed-shapes",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E03_concentric_rings.png",
+    "name": "E03_concentric_rings",
+    "description": "E03 concentric rings",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E04_random_rotation.png",
+    "name": "E04_random_rotation",
+    "description": "E04 random rotation",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E05_starburst_radial.png",
+    "name": "E05_starburst_radial",
+    "description": "E05 starburst radial",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E06_checkerboard_overlay.png",
+    "name": "E06_checkerboard_overlay",
+    "description": "E06 checkerboard overlay",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E07_distance_gradient.png",
+    "name": "E07_distance_gradient",
+    "description": "E07 distance gradient",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "color",
+      "mixed-shapes"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E08_cross_grid_circles.png",
+    "name": "E08_cross_grid_circles",
+    "description": "E08 cross grid circles",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E09_directional_triangles.png",
+    "name": "E09_directional_triangles",
+    "description": "E09 directional triangles",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "E10_stars_radial_hex_combo.png",
+    "name": "E10_stars_radial_hex_combo",
+    "description": "E10 stars radial hex combo",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/gen_e.py",
+    "tags": [
+      "mixed-shapes",
+      "s-curve"
+    ],
+    "stars": 1
+  },
+  {
+    "file": "100_paypal_solid_s.png",
+    "name": "100_paypal_solid_s",
+    "description": "PayPal-style rounded finders + S",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "46_rounded_finder_s.png",
+    "name": "46_rounded_finder_s",
+    "description": "46 rounded finder s",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "47_rounded_finder_no_s.png",
+    "name": "47_rounded_finder_no_s",
+    "description": "47 rounded finder no s",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "49_std_hex.png",
+    "name": "49_std_hex",
+    "description": "49 std hex",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "50_std_plus.png",
+    "name": "50_std_plus",
+    "description": "50 std plus",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "53_std_large.png",
+    "name": "53_std_large",
+    "description": "53 std large",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "55_std_no_grid.png",
+    "name": "55_std_no_grid",
+    "description": "55 std no grid",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "56_std_gradient.png",
+    "name": "56_std_gradient",
+    "description": "56 std gradient",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "color",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "57_std_quadrant.png",
+    "name": "57_std_quadrant",
+    "description": "57 std quadrant",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "color",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "58_std_indigo.png",
+    "name": "58_std_indigo",
+    "description": "58 std indigo",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "70_soft_square.png",
+    "name": "70_soft_square",
+    "description": "70 soft square",
+    "scans_pyzbar": true,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "01_dots_white_solid_s.png",
+    "name": "01_dots_white_solid_s",
+    "description": "01 dots white solid s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "02_dots_white_dot_s.png",
+    "name": "02_dots_white_dot_s",
+    "description": "02 dots white dot s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "03_dots_white_no_s.png",
+    "name": "03_dots_white_no_s",
+    "description": "03 dots white no s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "04_dots_white_dark.png",
+    "name": "04_dots_white_dark",
+    "description": "04 dots white dark",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "05_dots_white_sq_finder.png",
+    "name": "05_dots_white_sq_finder",
+    "description": "05 dots white sq finder",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "06_rounded_white.png",
+    "name": "06_rounded_white",
+    "description": "06 rounded white",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "07_diamond_white.png",
+    "name": "07_diamond_white",
+    "description": "07 diamond white",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "08_dots_blue_solid_s.png",
+    "name": "08_dots_blue_solid_s",
+    "description": "08 dots blue solid s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "09_dots_blue_dot_s.png",
+    "name": "09_dots_blue_dot_s",
+    "description": "09 dots blue dot s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "10_dots_blue_no_s.png",
+    "name": "10_dots_blue_no_s",
+    "description": "10 dots blue no s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "11_rounded_blue.png",
+    "name": "11_rounded_blue",
+    "description": "11 rounded blue",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "12_dots_navy.png",
+    "name": "12_dots_navy",
+    "description": "12 dots navy",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "13_dots_navy_dot_s.png",
+    "name": "13_dots_navy_dot_s",
+    "description": "13 dots navy dot s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "14_large_dots.png",
+    "name": "14_large_dots",
+    "description": "14 large dots",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "15_small_dots.png",
+    "name": "15_small_dots",
+    "description": "15 small dots",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "16_no_grid_emphasis.png",
+    "name": "16_no_grid_emphasis",
+    "description": "16 no grid emphasis",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "17_circle_finders.png",
+    "name": "17_circle_finders",
+    "description": "17 circle finders",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "18_slate_bg.png",
+    "name": "18_slate_bg",
+    "description": "18 slate bg",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "19_dot_finders_white.png",
+    "name": "19_dot_finders_white",
+    "description": "19 dot finders white",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "20_dot_finders_blue.png",
+    "name": "20_dot_finders_blue",
+    "description": "20 dot finders blue",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "21_logo_finders_white.png",
+    "name": "21_logo_finders_white",
+    "description": "21 logo finders white",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "22_logo_finders_blue.png",
+    "name": "22_logo_finders_blue",
+    "description": "22 logo finders blue",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "23_logo_finders_no_s.png",
+    "name": "23_logo_finders_no_s",
+    "description": "23 logo finders no s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "24_logo_finders_dot_s.png",
+    "name": "24_logo_finders_dot_s",
+    "description": "24 logo finders dot s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "25_logo_finders_dark.png",
+    "name": "25_logo_finders_dark",
+    "description": "25 logo finders dark",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "26_logo_finders_navy.png",
+    "name": "26_logo_finders_navy",
+    "description": "26 logo finders navy",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "27_center_logo_white.png",
+    "name": "27_center_logo_white",
+    "description": "27 center logo white",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "28_center_logo_blue.png",
+    "name": "28_center_logo_blue",
+    "description": "28 center logo blue",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "29_center_logo_plus_finders.png",
+    "name": "29_center_logo_plus_finders",
+    "description": "29 center logo plus finders",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "30_outline_dots_white.png",
+    "name": "30_outline_dots_white",
+    "description": "30 outline dots white",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "31_ring_dots_white.png",
+    "name": "31_ring_dots_white",
+    "description": "31 ring dots white",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "32_ring_dots_blue.png",
+    "name": "32_ring_dots_blue",
+    "description": "32 ring dots blue",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "33_hex_dots.png",
+    "name": "33_hex_dots",
+    "description": "33 hex dots",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "34_plus_dots.png",
+    "name": "34_plus_dots",
+    "description": "34 plus dots",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "35_star_dots.png",
+    "name": "35_star_dots",
+    "description": "35 star dots",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "36_outline_s.png",
+    "name": "36_outline_s",
+    "description": "36 outline s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "37_dashed_s.png",
+    "name": "37_dashed_s",
+    "description": "37 dashed s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "38_quadrant_colors.png",
+    "name": "38_quadrant_colors",
+    "description": "38 quadrant colors",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "39_gradient_blue.png",
+    "name": "39_gradient_blue",
+    "description": "39 gradient blue",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "40_random_sizes.png",
+    "name": "40_random_sizes",
+    "description": "40 random sizes",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "41_logo_finder_std.png",
+    "name": "41_logo_finder_std",
+    "description": "41 logo finder std",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "42_logo_finder_no_s.png",
+    "name": "42_logo_finder_no_s",
+    "description": "42 logo finder no s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "43_logo_finder_dot_s.png",
+    "name": "43_logo_finder_dot_s",
+    "description": "43 logo finder dot s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "44_logo_finder_dark.png",
+    "name": "44_logo_finder_dark",
+    "description": "44 logo finder dark",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "45_logo_finder_center.png",
+    "name": "45_logo_finder_center",
+    "description": "45 logo finder center",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "48_rounded_center_logo.png",
+    "name": "48_rounded_center_logo",
+    "description": "48 rounded center logo",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "51_std_ring.png",
+    "name": "51_std_ring",
+    "description": "51 std ring",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "52_std_outline.png",
+    "name": "52_std_outline",
+    "description": "52 std outline",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "54_std_small.png",
+    "name": "54_std_small",
+    "description": "54 std small",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "59_std_center_logo.png",
+    "name": "59_std_center_logo",
+    "description": "59 std center logo",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "60_std_center_s_outline.png",
+    "name": "60_std_center_s_outline",
+    "description": "60 std center s outline",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "61_qsdot_finder_solid_s.png",
+    "name": "61_qsdot_finder_solid_s",
+    "description": "61 qsdot finder solid s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "62_qsdot_finder_no_s.png",
+    "name": "62_qsdot_finder_no_s",
+    "description": "62 qsdot finder no s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "63_qsdot_finder_rounded.png",
+    "name": "63_qsdot_finder_rounded",
+    "description": "63 qsdot finder rounded",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "64_qsdot_finder_dark.png",
+    "name": "64_qsdot_finder_dark",
+    "description": "64 qsdot finder dark",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "65_qsdot_finder_center.png",
+    "name": "65_qsdot_finder_center",
+    "description": "65 qsdot finder center",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "66_qsdot_modules.png",
+    "name": "66_qsdot_modules",
+    "description": "66 qsdot modules",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "67_qsdot_modules_qs_finder.png",
+    "name": "67_qsdot_modules_qs_finder",
+    "description": "67 qsdot modules qs finder",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "68_donut_modules.png",
+    "name": "68_donut_modules",
+    "description": "68 donut modules",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "69_bullseye_modules.png",
+    "name": "69_bullseye_modules",
+    "description": "69 bullseye modules",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "71_soft_sq_qsdot_finder.png",
+    "name": "71_soft_sq_qsdot_finder",
+    "description": "71 soft sq qsdot finder",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "72_teal_gradient.png",
+    "name": "72_teal_gradient",
+    "description": "72 teal gradient",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "73_indigo_qsdot.png",
+    "name": "73_indigo_qsdot",
+    "description": "73 indigo qsdot",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "74_cyan_fresh.png",
+    "name": "74_cyan_fresh",
+    "description": "74 cyan fresh",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "75_quadrant_qsdot.png",
+    "name": "75_quadrant_qsdot",
+    "description": "75 quadrant qsdot",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "76_qsdot_large.png",
+    "name": "76_qsdot_large",
+    "description": "76 qsdot large",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "77_qsdot_no_grid.png",
+    "name": "77_qsdot_no_grid",
+    "description": "77 qsdot no grid",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "78_qsdot_dot_s.png",
+    "name": "78_qsdot_dot_s",
+    "description": "78 qsdot dot s",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "79_rounded_qsdot_gradient.png",
+    "name": "79_rounded_qsdot_gradient",
+    "description": "79 rounded qsdot gradient",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "80_full_qs.png",
+    "name": "80_full_qs",
+    "description": "80 full qs",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "88_etched_large_logo.png",
+    "name": "88_etched_large_logo",
+    "description": "Etched finders, larger logo (too big for pyzbar)",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "etched-finders",
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "93_rl_solid_s.png",
+    "name": "93_rl_solid_s",
+    "description": "Rounded finders with logo inside + S",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "94_rl_no_s.png",
+    "name": "94_rl_no_s",
+    "description": "Rounded finders with logo, no S",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "95_rl_gradient.png",
+    "name": "95_rl_gradient",
+    "description": "Rounded logo finders + gradient",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders",
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "96_rl_center.png",
+    "name": "96_rl_center",
+    "description": "Rounded logo finders + center logo",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "logo-finders"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "97_full_solid_s.png",
+    "name": "97_full_solid_s",
+    "description": "Full logo as finder + S",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "98_full_no_s.png",
+    "name": "98_full_no_s",
+    "description": "Full logo as finder",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [
+      "s-curve"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "99_full_center.png",
+    "name": "99_full_center",
+    "description": "Full logo finders + center logo",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate.py",
+    "tags": [],
+    "stars": 0
+  },
+  {
+    "file": "D07_dark_mode.png",
+    "name": "D07_dark_mode",
+    "description": "D07 dark mode",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "D08_dark_radial_glow.png",
+    "name": "D08_dark_radial_glow",
+    "description": "D08 dark radial glow",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/gen_bold_color.py",
+    "tags": [
+      "color"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "K01.png",
+    "name": "K01",
+    "description": "Pixel art \u2014 3x3 sub-pixel grid per module",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 0
+  },
+  {
+    "file": "K03.png",
+    "name": "K03",
+    "description": "Topographic contour lines",
+    "scans_pyzbar": false,
+    "scans_inverted": false,
+    "script": "scripts/generate_k.py",
+    "tags": [
+      "artistic"
+    ],
+    "stars": 0
+  }
+]

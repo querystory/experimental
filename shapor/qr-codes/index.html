@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QueryStory QR Code Experiments</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f1f5f9; padding: 20px; }
+  h1 { text-align: center; color: #1e3a5f; margin-bottom: 4px; font-size: 22px; }
+  .subtitle { text-align: center; color: #64748b; margin-bottom: 16px; font-size: 13px; }
+  .subtitle a { color: #2563eb; }
+  .controls { text-align: center; margin-bottom: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .controls button { padding: 5px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: white; cursor: pointer; font-size: 11px; }
+  .controls button.active { background: #2563eb; color: white; border-color: #2563eb; }
+  .stats { text-align: center; margin-bottom: 14px; font-size: 12px; color: #64748b; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; max-width: 1600px; margin: 0 auto; }
+  .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); cursor: pointer; position: relative; transition: transform 0.12s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .card img { width: 100%; aspect-ratio: 1; object-fit: contain; padding: 4px; background: #f8fafc; }
+  .card .label { padding: 4px 8px; font-size: 10px; color: #334155; font-weight: 500; border-top: 1px solid #e2e8f0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .badge { position: absolute; top: 4px; right: 4px; padding: 1px 5px; border-radius: 3px; font-size: 9px; font-weight: 700; }
+  .badge.scan { background: #dcfce7; color: #166534; }
+  .badge.fail { background: #fef2f2; color: #991b1b; }
+  .stars { position: absolute; top: 4px; left: 4px; font-size: 10px; }
+  .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; align-items: center; justify-content: center; flex-direction: column; padding: 20px; }
+  .overlay.active { display: flex; }
+  .overlay img { max-width: 80vmin; max-height: 70vmin; border-radius: 8px; }
+  .overlay .info { color: white; margin-top: 14px; text-align: center; max-width: 600px; }
+  .overlay .info h3 { font-size: 16px; margin-bottom: 6px; }
+  .overlay .info p { font-size: 13px; color: #94a3b8; margin: 3px 0; }
+  .overlay .info a { color: #60a5fa; font-size: 12px; }
+  .overlay .info .tags { margin-top: 6px; }
+  .overlay .info .tag { display: inline-block; padding: 2px 8px; background: rgba(255,255,255,0.1); border-radius: 4px; font-size: 11px; color: #cbd5e1; margin: 2px; }
+  .overlay .close { position: fixed; top: 14px; right: 20px; color: white; font-size: 28px; cursor: pointer; }
+  .overlay .nav { position: fixed; top: 50%; color: white; font-size: 36px; cursor: pointer; user-select: none; padding: 20px; }
+  .overlay .nav.prev { left: 10px; }
+  .overlay .nav.next { right: 10px; }
+</style>
+</head>
+<body>
+<h1>QueryStory QR Code Experiments</h1>
+<p class="subtitle">All encode <code>https://querystory.ai</code> &middot; <a href="https://github.com/querystory/experimental/tree/main/shapor/qr-codes">GitHub repo</a></p>
+<div class="stats" id="stats"></div>
+<div class="controls" id="controls"></div>
+<div class="grid" id="grid"></div>
+<div class="overlay" id="overlay">
+  <span class="close" onclick="closeOverlay()">&times;</span>
+  <span class="nav prev" onclick="navOverlay(-1)">&lsaquo;</span>
+  <span class="nav next" onclick="navOverlay(1)">&rsaquo;</span>
+  <img id="overlay-img" src="">
+  <div class="info" id="overlay-info"></div>
+</div>
+<script>
+const GITHUB_BASE = "https://github.com/querystory/experimental/blob/main/shapor/qr-codes/";
+let manifest = [];
+let filtered = [];
+let currentIdx = -1;
+let activeFilter = "top";
+let activeScan = "all";
+
+fetch("manifest.json").then(r => r.json()).then(data => {
+  manifest = data;
+  document.getElementById("stats").textContent =
+    `${manifest.length} variants \u2014 ${manifest.filter(v=>v.scans_pyzbar).length} pass pyzbar. Phone cameras scan more!`;
+  buildControls();
+  render();
+});
+
+function buildControls() {
+  const c = document.getElementById("controls");
+  const filters = [
+    { id: "top", label: "Top Picks" },
+    { id: "all", label: "All" },
+    { id: "scan", label: "Scans" },
+    { id: "fail", label: "Fails" },
+    { id: "|" },
+    { id: "etched-finders", label: "Etched Finders" },
+    { id: "connected", label: "Connected" },
+    { id: "s-curve", label: "S-Curve" },
+    { id: "shape-modulation", label: "Shape Mod" },
+    { id: "size-modulation", label: "Size Mod" },
+    { id: "color", label: "Color" },
+    { id: "combo", label: "Combos" },
+    { id: "white-on-blue", label: "White on Blue" },
+    { id: "artistic", label: "Artistic" },
+    { id: "mixed-shapes", label: "Mixed Shapes" },
+    { id: "extending-s", label: "Extending S" },
+    { id: "logo-finders", label: "Logo Finders" },
+  ];
+  filters.forEach(f => {
+    if (f.id === "|") { c.appendChild(document.createTextNode(" ")); return; }
+    const btn = document.createElement("button");
+    btn.textContent = f.label;
+    btn.dataset.filter = f.id;
+    if (f.id === "top") btn.classList.add("active");
+    btn.onclick = () => {
+      c.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = f.id;
+      render();
+    };
+    c.appendChild(btn);
+  });
+}
+
+function render() {
+  const f = activeFilter;
+  if (f === "top") filtered = manifest.filter(v => v.stars >= 2);
+  else if (f === "all") filtered = [...manifest];
+  else if (f === "scan") filtered = manifest.filter(v => v.scans_pyzbar);
+  else if (f === "fail") filtered = manifest.filter(v => !v.scans_pyzbar);
+  else filtered = manifest.filter(v => v.tags.includes(f));
+
+  const grid = document.getElementById("grid");
+  grid.innerHTML = "";
+  filtered.forEach((v, i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    const badge = v.scans_pyzbar
+      ? '<span class="badge scan">SCANS</span>'
+      : '<span class="badge fail">FAIL</span>';
+    const stars = v.stars > 0 ? `<span class="stars">${"\u2605".repeat(v.stars)}</span>` : "";
+    card.innerHTML = `${badge}${stars}<img src="variants/${v.file}" loading="lazy"><div class="label" title="${v.description}">${v.description}</div>`;
+    card.onclick = () => openOverlay(i);
+    grid.appendChild(card);
+  });
+}
+
+function openOverlay(idx) {
+  currentIdx = idx;
+  const v = filtered[idx];
+  document.getElementById("overlay-img").src = "variants/" + v.file;
+  const tags = v.tags.map(t => `<span class="tag">${t}</span>`).join("");
+  document.getElementById("overlay-info").innerHTML = `
+    <h3>${v.description}</h3>
+    <p>${v.scans_pyzbar ? "\u2705 Scans with pyzbar" : "\u274c pyzbar fail \u2014 try phone"}${v.scans_inverted ? " (scans inverted)" : ""}</p>
+    <p><a href="${GITHUB_BASE}${v.script}" target="_blank">\ud83d\udcc4 ${v.script}</a></p>
+    <p style="font-size:11px;color:#64748b">File: ${v.file}</p>
+    <div class="tags">${tags}</div>
+  `;
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeOverlay() { document.getElementById("overlay").classList.remove("active"); currentIdx = -1; }
+function navOverlay(dir) {
+  if (currentIdx < 0) return;
+  currentIdx = (currentIdx + dir + filtered.length) % filtered.length;
+  openOverlay(currentIdx);
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeOverlay();
+  if (e.key === "ArrowLeft") navOverlay(-1);
+  if (e.key === "ArrowRight") navOverlay(1);
+});
+document.getElementById("overlay").addEventListener("click", e => {
+  if (e.target === document.getElementById("overlay")) closeOverlay();
+});
+</script>
+</body>
+</html>
