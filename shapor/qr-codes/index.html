@@ -73,15 +73,9 @@ let votes = {};       // aggregated from server
 let myVotes = JSON.parse(localStorage.getItem("qr-votes") || "{}"); // {file: {vote, stars}}
 let userEmail = "anonymous";
 
-// Load manifest + votes + identity
-Promise.all([
-  fetch("manifest.json").then(r => r.json()),
-  fetch(WEBHOOK).then(r => r.json()).catch(() => ({})),
-  fetch("/_identity").then(r => r.json()).catch(() => ({ email: "" })),
-]).then(([data, serverVotes, identity]) => {
+// Load manifest first (fast), render immediately, then load votes + identity in background
+fetch("manifest.json").then(r => r.json()).then(data => {
   manifest = data;
-  votes = serverVotes;
-  userEmail = identity.email || "anonymous";
   document.getElementById("stats").textContent =
     `${manifest.length} variants \u2014 ${manifest.filter(v=>v.scans_pyzbar).length} pass pyzbar. Phone cameras scan more!`;
   buildControls();
@@ -97,6 +91,14 @@ Promise.all([
     const idx = filtered.findIndex(v => v.name === urlV);
     if (idx >= 0) openOverlay(idx);
   }
+});
+// Load votes + identity in background (slow, don't block render)
+fetch("/_identity").then(r => r.json()).catch(() => ({ email: "" })).then(id => {
+  userEmail = id.email || "anonymous";
+});
+fetch(WEBHOOK).then(r => r.json()).catch(() => ({})).then(serverVotes => {
+  votes = serverVotes;
+  render(); // re-render to show vote counts
 });
 
 function sendVote(file, vote, stars) {
