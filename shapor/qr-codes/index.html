@@ -86,6 +86,17 @@ Promise.all([
     `${manifest.length} variants \u2014 ${manifest.filter(v=>v.scans_pyzbar).length} pass pyzbar. Phone cameras scan more!`;
   buildControls();
   render();
+  // Open variant from URL param
+  const urlV = new URLSearchParams(location.search).get("v");
+  if (urlV) {
+    activeFilter = "all";
+    document.querySelectorAll(".controls button").forEach(b => {
+      b.classList.toggle("active", b.dataset.filter === "all");
+    });
+    render();
+    const idx = filtered.findIndex(v => v.name === urlV);
+    if (idx >= 0) openOverlay(idx);
+  }
 });
 
 function sendVote(file, vote, stars) {
@@ -179,9 +190,11 @@ function openOverlay(idx) {
   currentIdx = idx;
   const v = filtered[idx];
   const my = myVotes[v.file] || {};
+  history.replaceState(null, "", "?v=" + encodeURIComponent(v.name));
   document.getElementById("overlay-img").src = "variants/" + v.file;
   const tags = v.tags.map(t => `<span class="tag">${t}</span>`).join("");
   const vd = getVoteDisplay(v.file);
+  const permalink = location.origin + location.pathname + "?v=" + encodeURIComponent(v.name);
 
   let starButtons = "";
   for (let i = 1; i <= 5; i++) {
@@ -200,6 +213,7 @@ function openOverlay(idx) {
       <div class="star-rating">${starButtons}</div>
       <div class="vote-status">${vd.count > 0 ? `${vd.avg}\u2605 (${vd.count} votes) \u00b7 \u{1f44d}${vd.up} \u{1f44e}${vd.down}` : "No votes yet"}</div>
     </div>
+    <p><button onclick="copyLink('${permalink}')" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#60a5fa;padding:4px 12px;border-radius:5px;cursor:pointer;font-size:12px">\ud83d\udd17 Copy link</button></p>
     <p><a href="${GITHUB_BASE}${v.script}" target="_blank">\ud83d\udcc4 ${v.script}</a></p>
     <p style="font-size:11px;color:#64748b">File: ${v.file}</p>
     <div class="tags">${tags}</div>
@@ -219,7 +233,19 @@ function voteStar(idx, stars) {
   openOverlay(idx); // refresh UI
 }
 
-function closeOverlay() { document.getElementById("overlay").classList.remove("active"); currentIdx = -1; }
+function copyLink(url) {
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = event.target;
+    btn.textContent = "\u2705 Copied!";
+    setTimeout(() => btn.textContent = "\ud83d\udd17 Copy link", 1500);
+  });
+}
+
+function closeOverlay() {
+  document.getElementById("overlay").classList.remove("active");
+  currentIdx = -1;
+  history.replaceState(null, "", location.pathname);
+}
 function navOverlay(dir) {
   if (currentIdx < 0) return;
   currentIdx = (currentIdx + dir + filtered.length) % filtered.length;
